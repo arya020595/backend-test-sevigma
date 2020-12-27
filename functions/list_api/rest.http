@@ -1,0 +1,12 @@
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+### BASE URI
+GET http://{{host}}/ HTTP/1.1
+
+### GET 
+GET http://{{host}}/api/user HTTP/1.1
